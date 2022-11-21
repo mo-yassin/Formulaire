@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/972f63b1c4.js" crossorigin="anonymous"></script>
+    <title>Solicode</title>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="images/logo-solicode.svg" alt="logo-solicode">
+            <button type="button" onclick="location.href='https://system.solicode.co/inscription'">Créer un compte</button>
+        </div>
+        <hr>
+    </header>
+    <main>
+        <section class="container">
+            <h1>Inscrivez vous à nos activités parascolaires.</h1>
+            <p>Afin de maintenir la motivation des apprenants, leur offrir des moments agréables d'échange et d'épanouissement,<br>Solicode a pensé à créer des activités parascolaires sous forme de clubs (informatique, robotique, jeux d'échecs, foot,musique, théatre).</p>
+            <p>Pour cela, on vous demande de vous inscrire sur ce formulaire si vous êtes intéressé.</p>
+        </section>
+        <section class="form-container">
+            <form action="confirmation.html">
+                <small id="alert">Tous les champs sont obligatoires</small>
+                <div class="form">
+                    <label for="nom"><i class="fa-solid fa-user"></i> Nom</label>
+                    <input id="nom" name="nom" type="text" placeholder="Nom" onkeyup="firstname()">
+                    <output id="name"></output>
+                </div>
+                <div class="form">
+                    <label for="prenom"><i class="fa-solid fa-user"></i> Prenom</label>
+                    <input id="prenom" name="prenom" type="text" placeholder="Prenom" onkeyup="lastname()">
+                    <output id="prename"></output>
+                </div>
+                <div class="form">
+                    <label for="email"><i class="fa-solid fa-envelope"></i> Email - <small>Format: nom.prenom@ofppt.ma</small></label>
+                    <input id="email" name="email" type="text" placeholder="nom.prenom@ofppt.ma" onkeyup="ofpptmail()">
+                    <output id="mail"></output>
+                </div>
+                <div class="form">
+                    <label for="telephone"><i class="fa-solid fa-phone"></i> Telephone - <small>Commencer obligatoirement par 05 ou 06 ou 07</small></label>
+                    <input id="telephone" name="telephone" type="text" placeholder="Telephone" onkeyup="phonenumber()">
+                    <output id="phone"></output>
+                </div>
+                <div class="form">
+                    <fieldset>
+                        <legend><i class="fa-solid fa-venus-mars"></i> Genre :</legend>
+                        <div>
+                            <input type="radio" name="genre" id="female"><span id="female-color"> Female</span>
+                        </div>
+                        <div>
+                            <input type="radio" name="genre" id="male"><span id="male-color"> Male</span>
+                        </div>
+                    </fieldset>
+                    <output id="gender"></output>
+                </div>
+                <div class="form">
+                    <fieldset id="field">
+                        <legend><i class="fa-solid fa-people-roof"></i> Groupe :</legend>
+                        <div>
+                            <input type="radio" name="groupe" id="dw101"><span id="dw101-color"> DW101</span>
+                        </div>
+                        <div>
+                            <input type="radio" name="groupe" id="dw102"><span id="dw102-color"> DW102</span>
+                        </div>
+                        <div>
+                            <input type="radio" name="groupe" id="dw103"><span id="dw103-color"> DW103</span>
+                        </div>
+                        <div>
+                            <input type="radio" name="groupe" id="dw104"><span id="dw104-color"> DW104</span>
+                        </div>
+                        <div>
+                            <input type="radio" name="groupe" id="dm101"><span id="dm101-color"> DM101</span>
+                        </div>
+                        <div>
+                            <input type="radio" name="groupe" id="dm102"><span id="dm102-color"> DM102</span>
+                        </div>
+                    </fieldset>
+                    <output id="classe"></output>
+                </div>
+                <div class="form">
+                    <label><i class="fa-brands fa-connectdevelop"></i> Clubs :</label>
+                    <select id="clubs" class="multiple-select" multiple>
+                        <option value="informatique">Informatique</option>
+                        <option value="robotique">Robotique</option>
+                        <option value="jeu d'echects">Jeu d'echects</option>
+                        <option value="musique">Musique</option>
+                        <option value="foot">Foot</option>
+                        <option value="theatre">Theatre</option>
+                    </select>
+                </div>
+                <output id="club"></output>
+                <button type="submit" id="submit">Submit</button>
+                <p id="inscription">Vous n'êtes pas un étudiant de solicode? <a href="https://system.solicode.co/inscription">S'inscrire maintenant.</a></p>
+            </form>
+        </section>
+    </main>
+    <script src="inline.js"></script>
+</body>
+</html>
