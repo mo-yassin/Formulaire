@@ -154,7 +154,7 @@ i {
 
 select {
     overflow: hidden;
-    height: 30vh !important;
+    height: 30vh;
 }
 
 option {
@@ -221,4 +221,49 @@ select[multiple]:focus option:checked {
     color: white;
     font-family: 'Ubuntu', sans-serif;
     font-size: larger;
+}
+
+@media only screen and (max-width: 1420px) {
+    select {
+        height: 26vh;
+    }
+}
+@media only screen and (max-width: 1080px) {
+    #field {
+        display: flex;
+        flex-direction: column;
+    }
+    select {
+        overflow: hidden;
+        height: 24vh;
+    }
+}
+@media only screen and (max-width: 950px) {
+    select {
+        height: 22.5vh;
+    }
+}
+@media only screen and (max-width: 650px) {
+    select {
+        height: 19vh;
+    }
+    small {
+        font-size: x-small;
+    }
+}
+@media only screen and (max-width: 550px) {
+    #inscription {
+        font-size: small;
+    }
+}
+@media only screen and (max-width: 400px) {
+    select {
+        height: 17vh;
+    }
+    small {
+        font-size: xx-small;
+    }
+    #inscription {
+        font-size: x-small;
+    }
 }
